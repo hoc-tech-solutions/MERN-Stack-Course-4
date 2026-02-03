@@ -1,21 +1,25 @@
-body{
-    background: #76B952;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+body {
+  background: #76b952;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 
-.main-box{
-    background: white;
- 
+.main-box {
+  background: white;
 }
 
-input{
-    background: #F2F2F2 !important;
+input {
+  background: #f2f2f2 !important;
 }
 
-.login-btn{
-    background: #76B952;
-    color: white;
+.login-btn {
+  background: #76b952;
+  color: white;
+}
+
+.main-box {
+  -webkit-box-shadow: 0px 0px 28px 0px #000000;
+  box-shadow: 0px 0px 28px 0px #000000;
 }
