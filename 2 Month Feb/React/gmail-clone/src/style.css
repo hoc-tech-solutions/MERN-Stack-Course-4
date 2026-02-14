@@ -1,40 +1,151 @@
-/* Universal Style */
+@import url("https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&display=swap");
+/* ========== UNIVERSAL STYLES ========== */
 
-/* Universal Selctor * Applies to all HTML Elements and Tags */
-*{
-    margin : 0;             /*Remove default margin from all element */
-    padding : 0;              /*Remove default padding from all element */
-    box-sizing: border-box;   /* Include padding and border in element's total width/height*/
+/* Universal Selector - Applies to all HTML elements */
+* {
+  margin: 0; /* Remove default margin from all elements */
+  padding: 0; /* Remove default padding from all elements */
+  box-sizing: border-box; /* Include padding and border in element's total width/height */
+    font-family: "Google Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-variation-settings: "GRAD" 0;
+  font-size: .975rem;
 }
-   
+
 /* Body - Main page container */
-body{
-   
-    background: white;
-    
-}
+body {
+  background: #fff; /* White background */
 
+  font-family: "Google Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings: "GRAD" 0;
+}
 
 /* Gmail Container - Main wrapper for entire app */
-.gmail-container{
-    height: 100vh;  /*full viewport height (100% of screen)*/
-    display: flex;  /*flexbox layout*/
-    flex-direction: column;   /*Stack children vertically*/
+.gmail-container {
+  height: 100vh; /* Full viewport height (100% of screen) */
+  display: flex; /* Flexbox layout */
+  flex-direction: column; /* Stack children vertically */
 }
-
 
 /* Header section CSS */
-.gmail-header{
-    display: flex;
-    text-align: center;  /*Vertically center all Items*/
-    padding: 8px 12px;   /*8px top-bottom and 12px left-right padding*/
-    height: 61px;        /*fix header height*/
-    background: #F8FAFD;
+.gmail-header {
+  display: flex;
+  text-align: center; /* Vertically center all items */
+  padding: 8px 12px; /* 8px top/bottom, 12px left/right padding */
+  height: 61px; /* Fixed header height */
+  background-color: #f8fafd;
+
+  position: fixed;
+  z-index: 1;
+  width: 100%;
 }
 
-.header-search{
-    max-width: 500px;
-    background: #E9EEF6;
-    border: 0px solid black;
-    border-radius: 50px;
+.header-search {
+  max-width: 500px;
+  background: #e9eef6;
+  border: 0px solid black;
+  border-radius: 50px;
 }
+
+/* ====== Side Bar CSS */
+
+.compose-btn {
+  background: #c2e7ff;
+  border: none !important;
+  border-radius: 15px;
+  font-size: 15px;
+  font-weight: 600 !important;
+  box-shadow:
+    ba(60, 64, 67, 0.3),
+    0 1px 3px 1px rgba(60, 64, 67, 0.15);
+  color: #202124 !important;
+  text-align: center;
+}
+
+.sidebar {
+  padding: 9px;
+  background: #f8fafd;
+  position: fixed;
+  bottom: 0;
+  top: 6%;
+}
+
+.compose-btn:hover {
+  background: #c2e7ff;
+  box-shadow:
+    0 1px 3px 0 rgba(60, 64, 67, 0.3),
+    0 4px 8px 3px rgba(60, 64, 67, 0.15) !important; /* Larger shadow */
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.sidebar-nav {
+  padding-left: 10px;
+}
+
+.nav-item {
+  padding: 10px 24px 0 20px !important; /* Right 24px, left 20px padding */
+  height: 32px; /* Fixed height */
+  border-radius: 0 16px 16px 0 !important; /* Rounded right corners only */
+  font-size: 16px; /* Text size */
+  color: #202124 !important; /* Dark gray text */
+  margin: 2px 0; /* 2px top/bottom margin */
+  text-decoration: none !important; /* Remove underline */
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+/* ============= Main Content */
+.main-content {
+  display: flex;
+  flex-direction: column;
+  margin-left: 16%;
+  margin-top: 4%;
+  padding-left: 0;
+}
+
+.email-list {
+  background: #fff;
+  padding-left: 7px;
+}
+
+.email-row {
+  height: 45px;
+  cursor: pointer;
+}
+
+.star-btn {
+  font-size: 25px;
+}
+
+.read {
+  background: #f2f6fc;
+}
+
+.unread {
+  background: #ffffff;
+}
+
+.read .form-check-input {
+  background: #f2f6fc;
+  border: 1px solid #bec1c5;
+}
+.unread .form-check-input {
+  background: #ffffff;
+}
+
+.unread {
+  font-weight: bold;
+}
+/* .email-row:hover {
+    box-shadow: inset 1px 0 0 rgb(218, 220, 224), inset -1px 0 0 rgb(218, 220, 224), 0 1px 2px 0 rgba(60, 64, 67, 0.3), 0 1px 3px 1px rgba(60, 64, 67, 0.15);
+    z-index: 2;
+} */
