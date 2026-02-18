@@ -847,6 +847,7 @@ function App() {
                   </span>
                   <span className="time p-2">9:42 AM</span>
                 </div>
+
                 <div className="email-row d-flex align-items-center border-bottom read">
                   <Form.Check type="checkbox" className="email-checkbox p-2" />
                   <button variant="link" className="star-btn p-0 btn p-2">
@@ -862,6 +863,7 @@ function App() {
                   </span>
                   <span className="time p-2">9:42 AM</span>
                 </div>
+                
                 <div className="email-row d-flex align-items-center border-bottom read">
                   <Form.Check type="checkbox" className="email-checkbox p-2" />
                   <button variant="link" className="star-btn p-0 btn p-2">
