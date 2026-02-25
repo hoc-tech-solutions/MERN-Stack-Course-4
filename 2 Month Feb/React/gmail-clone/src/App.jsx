@@ -349,7 +349,7 @@ function App() {
 
             {/* Main Content */}
             <div className="col-md-10 main-content">
-              <div className="email-list">
+              <div className="email-list box-1">
 
                 
                 <div className="email-row d-flex align-items-center border-bottom read">
@@ -881,6 +881,9 @@ function App() {
                 </div>
 
 
+              </div>
+              <div className="box-2">
+                <h3>I</h3>
               </div>
             </div>
           </div>

@@ -10,7 +10,7 @@
   font-optical-sizing: auto;
   font-style: normal;
   font-variation-settings: "GRAD" 0;
-  font-size: .975rem;
+  font-size: .975rem; 
 }
 
 /* Body - Main page container */
@@ -106,12 +106,19 @@ ul {
 /* ============= Main Content */
 .main-content {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   margin-left: 16%;
   margin-top: 4%;
   padding-left: 0;
 }
 
+.box-1{
+  width: 95%;
+}
+.box-2{
+  width: 5%;
+  background: #F8FAFD;
+}
 .email-list {
   background: #fff;
   padding-left: 7px;
