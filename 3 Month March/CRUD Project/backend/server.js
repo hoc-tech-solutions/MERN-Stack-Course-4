@@ -15,22 +15,23 @@ console.log("Hello Node js Project Strted")
 const express = require('express') // Node js Fremwork
 const app = express() // app - variable - store express function
 const mongoose = require('mongoose') // Library - connect mongodb Database
-
+const cors = require('cors') // Library - solve cors error
 
 app.use(express.json()) // convert all data into json format
-
+app.use(cors())
 // DB Connection
 
 mongoose.connect("mongodb://127.0.0.1:27017/item-database").then(() => console.log("Mongo DB Connected")).catch((error) => console.log(error))
 
 // Schema - Model - Data base table structure 
 // values store database - structure
-
-
 const itemsSchema = new mongoose.Schema({
     name: String,
     decription: String,
-    sellingPrice: Number
+    sellingPrice: Number,
+    purchasePrice: Number,
+    quantity: Number,
+    unit: String
 })
 
 
@@ -41,20 +42,23 @@ app.post("/api/create-item", async (req, res) => {
 
     try {
 
-        const { name, decription, sellingPrice } = req.body
+        const { name, decription, sellingPrice, purchasePrice, quantity, unit } = req.body
 
 
         const saveItem = new Items(
             {
                 name,
                 decription,
-                sellingPrice
+                sellingPrice,
+                purchasePrice, 
+                quantity, 
+                unit
             }
         )
 
         await saveItem.save()
 
-        res.status(201).json({ message : "Item Created" , data : saveItem})
+        res.status(201).json({ message: "Item Created", data: saveItem })
 
 
     } catch (error) {
@@ -95,7 +99,7 @@ app.get("/api/get-all-item", async (req, res) => {
 
         const items = await Items.find()
 
-        res.status(200).json({ message : "Get All Item List", data : items})
+        res.status(200).json({ message: "Get All Item List", data: items })
 
 
     } catch (error) {
